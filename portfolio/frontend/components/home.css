@@ -1,0 +1,75 @@
+/* home.css */
+
+:root {
+    --bg-dark: #0e0e10;
+    --text-light: #f4f4f5;
+    --accent: #4ade80;
+    --muted: #9ca3af;
+    --card-bg: #1f1f23;
+    --border: #2c2c2e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Layout */
+#sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border);
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#list ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+#list ul li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--muted);
+    transition: all 0.2s ease-in-out;
+}
+
+#sidebar ul li:hover {
+    background-color: var(--accent);
+    color: #0e0e10;
+}
+
+/* Main Chat Section */
+#chat_with_ai {
+    margin-left: 240px;
+    /* leave space for sidebar */
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: chatbot box styling */
+#chat_with_ai::before {
+    content: '🤖 Chat With AI Coming Soon!';
+    font-size: 1.5rem;
+    color: var(--muted);
+}
