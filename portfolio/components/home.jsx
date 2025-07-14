@@ -5,7 +5,7 @@ import ajayImage from './ajay.jpg';
 
 function Home() {
     return (
-        <div>
+        <div id="homes">
             <div id="side">
                 <SideBar />
             </div>

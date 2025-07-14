@@ -118,6 +118,10 @@
 }
 
 @media (max-width: 480px) {
+    #projects-container {
+        padding-top: 20%;
+    }
+
     #projects-container h2 {
         font-size: 2rem;
     }

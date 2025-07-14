@@ -142,6 +142,9 @@ body {
         width: 130px;
         height: 130px;
     }
+    #homes{
+        padding-top: 10%;
+    }
 
     #content {
         font-size: 18px;
