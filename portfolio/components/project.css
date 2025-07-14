@@ -1,0 +1,137 @@
+/* projects.css */
+
+#projects-container {
+    margin-left: 250px;
+    /* Adjust if you have a sidebar */
+    padding: 40px 60px;
+    background-color: #121212;
+    min-height: 100vh;
+    color: #f0f0f0;
+    max-width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#projects-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #eeeeee;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.project {
+    display: flex;
+    gap: 40px;
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin-bottom: 40px;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    background-color: #292929;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9);
+}
+
+.left {
+    flex: 0 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.left img {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.left img:hover {
+    border-color: #aaa;
+    box-shadow: 0 4px 12px rgba(170, 170, 170, 0.6);
+}
+
+.left h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #cccccc;
+    text-align: center;
+}
+
+.right {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bbb;
+    user-select: text;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    #projects-container {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    .project {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .left {
+        flex: none;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .left img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+    }
+
+    .left h3 {
+        font-size: 1.1rem;
+        align-self: center;
+        text-align: left;
+    }
+
+    .right {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #projects-container h2 {
+        font-size: 2rem;
+    }
+
+    .left img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .left h3 {
+        font-size: 1rem;
+    }
+
+    .right {
+        font-size: 0.9rem;
+    }
+}

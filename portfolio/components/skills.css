@@ -1,0 +1,149 @@
+#skills {
+    margin-left: 250px;
+    /* space for sidebar */
+    padding: 40px;
+    background-color: #181818;
+    color: white;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+#skills h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e7e6e1;
+}
+
+.skill-section {
+    margin-bottom: 50px;
+}
+
+.skill-section h3 {
+    color: #83afa6;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 25px;
+    padding: 0 10px;
+}
+
+.skill-card {
+    background-color: #222;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 231, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 231, 0.5);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1024px) {
+    #skills {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+
+    #skills h2 {
+        font-size: 28px;
+    }
+
+    .skill-section h3 {
+        font-size: 22px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 20px;
+    }
+
+    .skill-card img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .skill-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    #skills {
+        padding: 25px 15px;
+    }
+
+    #skills h2 {
+        font-size: 24px;
+    }
+
+    .skill-section h3 {
+        font-size: 20px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #skills {
+        padding: 20px 10px;
+    }
+
+    #skills h2 {
+        font-size: 20px;
+    }
+
+    .skill-section h3 {
+        font-size: 18px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 12px;
+    }
+
+    .skill-card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skill-card p {
+        font-size: 11px;
+    }
+}
