@@ -1,36 +1,44 @@
 import React from "react";
 import "./education.css";
 import SideBar from "./Sidebar";
+
 function Education() {
+    const educationData = [
+        {
+            title: "B.Tech in Artificial Intelligence and Machine Learning",
+            institution: "Madhav Institute of Technology and Science, Gwalior",
+            duration: "2022 – 2026",
+            detail: "CGPA: 8.6",
+        },
+        {
+            title: "Higher Secondary Education (XII - CBSE)",
+            institution: "Kendriya Vidyalaya No.4 AFS, Gwalior",
+            duration: "Year: 2022",
+            detail: "Percentage: 93.4%",
+        },
+        {
+            title: "Secondary Education (X - CBSE)",
+            institution: "Kendriya Vidyalaya No.4 AFS, Gwalior",
+            duration: "Year: 2020",
+            detail: "Percentage: 90.4%",
+        },
+    ];
+
     return (
         <>
             <SideBar />
             <div id="education-container">
-                <h2>Education</h2>
-                <div>
-                    <div className="education-section">
-                        <h3>B.Tech in Artificial Intelligence and Machine Learning</h3>
-                        <p>Madhav Institute of Technology and Science, Gwalior</p>
-                        <p><strong>Duration:</strong> 2022 – 2026</p>
-                        <p><strong>CGPA:</strong> 8.6</p>
-                    </div>
-
-                    <div className="education-section">
-                        <h3>Higher Secondary Education (XII - CBSE)</h3>
-                        <p>Kendriya Vidyalaya No.4 AFS, Gwalior</p>
-                        <p><strong>Year:</strong> 2022</p>
-                        <p><strong>Percentage:</strong> 93.4%</p>
-                    </div>
-
-                    <div className="education-section">
-                        <h3>Secondary Education (X - CBSE)</h3>
-                        <p>Kendriya Vidyalaya No.4 AFS, Gwalior</p>
-                        <p><strong>Year:</strong> 2020</p>
-                        <p><strong>Percentage:</strong> 90.4%</p>
-                    </div>
+                <h2 className="education-heading">📘 Education</h2>
+                <div className="education-list">
+                    {educationData.map((edu, index) => (
+                        <div className="education-card" key={index}>
+                            <h3>{edu.title}</h3>
+                            <p className="institution">{edu.institution}</p>
+                            <p><strong>{edu.duration}</strong></p>
+                            <p>{edu.detail}</p>
+                        </div>
+                    ))}
                 </div>
-
-
             </div>
         </>
     );
