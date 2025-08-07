@@ -165,6 +165,7 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
     .achievements-container {
+        margin-top: 40px !important;
         margin-left: 0 !important;
         /* override inline style if needed */
         padding: 1rem;

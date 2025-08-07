@@ -114,9 +114,12 @@ body {
 
 /* Tablet & Mobile */
 @media (max-width: 768px) {
+
+
     #about {
         margin-left: 0;
         padding: 30px 20px;
+        margin-top: 40px !important;
     }
 
     #image img {
@@ -143,6 +146,7 @@ body {
     #image img {
         width: 130px;
         height: 130px;
+
     }
 
     #content {

@@ -15,6 +15,8 @@
     border-right: 1px solid #333;
     box-sizing: border-box;
     transition: all 0.3s ease;
+    overflow-y: auto;
+    /* Enable vertical scroll if content overflows */
 }
 
 #sign {
@@ -103,6 +105,10 @@
         justify-content: space-between;
         border-right: none;
         border-bottom: 1px solid #333;
+        overflow-x: auto;
+        /* Allow horizontal scrolling if needed */
+        white-space: nowrap;
+        /* Prevent nav items from wrapping */
     }
 
     #sign {
@@ -130,6 +136,8 @@
         align-items: center;
         gap: 15px;
         width: auto;
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
     }
 
     #list ul li {
