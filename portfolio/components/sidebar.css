@@ -1,53 +1,47 @@
-/* Sidebar container */
+/* ============ Sidebar Styles ============ */
+
 #sidebar {
-    width: 250px;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #1e1e1e;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    border-right: 1px solid #333;
-    z-index: 1000;
+    width: 250px;
+    height: 100vh;
     padding-top: 30px;
+    border-right: 1px solid #333;
     box-sizing: border-box;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-/* Logo container */
 #sign {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
     padding: 0 15px;
-    box-sizing: border-box;
 }
 
-/* Logo image */
 #sign img {
     width: 70%;
+    max-width: 150px;
     height: auto;
     object-fit: contain;
-    max-width: 150px;
 }
 
-/* List container */
+/* Navigation list */
 #list {
     width: 100%;
     flex-grow: 1;
-    /* take remaining vertical space */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 15px;
-    box-sizing: border-box;
 }
 
-/* List layout */
 #list ul {
     list-style: none;
     padding: 0;
@@ -55,31 +49,31 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
+    gap: 15px;
 }
 
-/* List items */
+/* Navigation item */
 #list ul li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #393e46;
     width: 85%;
     font-size: 18px;
     padding: 12px 25px;
-    cursor: pointer;
     border-radius: 8px;
-    color: #daf4f5;
     text-align: center;
-    user-select: none;
+    color: #daf4f5;
+    cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+    user-select: none;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #list ul li:hover {
     background-color: #00ffe7;
     color: #000;
-    box-shadow: 0 4px 12px rgba(0, 255, 231, 0.5);
     transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 255, 231, 0.5);
 }
 
 #list ul li:active {
@@ -89,26 +83,33 @@
     box-shadow: none;
 }
 
-/* ---------- Responsive Styles ---------- */
+/* Active link */
+#list ul li.active {
+    background-color: #d3d6db;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 4px 12px #3a4750;
+    transform: translateY(-2px);
+}
+
+/* ============ Responsive Sidebar ============ */
+
 @media (max-width: 768px) {
     #sidebar {
+        flex-direction: row;
         width: 100%;
         height: 60px;
-        flex-direction: row;
-        position: fixed;
-        top: 0;
-        left: 0;
+        padding: 0 20px;
+        justify-content: space-between;
         border-right: none;
         border-bottom: 1px solid #333;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
     }
 
     #sign {
         margin: 0;
         padding: 0;
         width: auto;
+        margin-right: 10px;
     }
 
     #sign img {
@@ -126,9 +127,9 @@
     #list ul {
         flex-direction: row;
         justify-content: flex-end;
+        align-items: center;
         gap: 15px;
         width: auto;
-        align-items: center;
     }
 
     #list ul li {
@@ -155,13 +156,4 @@
         padding: 6px 10px;
         border-radius: 5px;
     }
-}
-
-/* Active nav item */
-#list ul li.active {
-    background-color: #00ffe7;
-    color: #000;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 255, 231, 0.5);
-    transform: translateY(-2px);
 }

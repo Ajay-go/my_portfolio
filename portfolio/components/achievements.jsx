@@ -31,12 +31,10 @@ function Achievements() {
         {
             title: "Machine Learning Certification",
             img: c1,
-            link: "https://coursera.org/verify/machine-learning-cert",
         },
         {
-            title: "React Developer Bootcamp",
+            title: "Codathon 2.0 MITS Gwl",
             img: c3,
-            link: "https://udemy.com/certificate/react-bootcamp",
             rotateLeft: true,
         },
         {

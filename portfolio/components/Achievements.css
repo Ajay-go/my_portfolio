@@ -1,4 +1,4 @@
-/* Global dark theme */
+/* Global dark theme for achievements page */
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
@@ -6,18 +6,21 @@ body {
     color: #ffffff;
 }
 
-/* Main container with sidebar margin */
+/* Main container */
 .achievements-container {
-    margin-left: 250px;
-    /* Space for fixed vertical sidebar on desktop */
-    padding: 1.5rem;
-    transition: margin-left 0.3s ease, margin-top 0.3s ease;
+    /* margin-left set inline in React to 250px for sidebar */
+    padding: 20px;
+    background-color: #121212;
+    transition: padding 0.3s ease;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
+/* Headings */
 .heading {
     text-align: center;
     font-size: 1.75rem;
-    color: #00bcd4;
+    color: whitesmoke;
     margin-bottom: 1.5rem;
 }
 
@@ -42,7 +45,7 @@ body {
     border: 1px solid #333;
     text-decoration: none;
     color: #ffffff;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .text-card:hover {
@@ -52,7 +55,7 @@ body {
 
 .text-card h3 {
     margin: 0 0 0.3rem 0;
-    color: #90caf9;
+    color: #b6cdbd;
     font-size: 1.2rem;
 }
 
@@ -120,10 +123,12 @@ body {
 .certificate-card h3 {
     margin-top: 0.75rem;
     font-size: 1.1rem;
-    color: #90caf9;
+    color: #b6cdbd;
 }
 
-/* Responsive grid for text achievements and certificates */
+/* ------------------ Responsive Styles ------------------ */
+
+/* Tablet and up */
 @media (min-width: 600px) {
     .text-achievements {
         flex-direction: row;
@@ -146,6 +151,7 @@ body {
     }
 }
 
+/* Desktop */
 @media (min-width: 900px) {
     .text-card {
         width: calc(33.33% - 1rem);
@@ -156,15 +162,36 @@ body {
     }
 }
 
-/* ------------- Responsive margin fix for smaller screens ------------ */
+/* Mobile */
 @media (max-width: 768px) {
     .achievements-container {
-        margin-left: 0;
-        /* Remove left margin when sidebar is horizontal */
-        margin-top: 60px;
-        /* Add top margin for horizontal sidebar height */
+        margin-left: 0 !important;
+        /* override inline style if needed */
         padding: 1rem;
+    }
+
+    .text-achievements {
+        align-items: center;
+    }
+
+    .text-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .certificate-card {
+        width: 100%;
     }
 }
 
-/* You can adjust 60px if your horizontal sidebar height changes */
+/* Very small mobile */
+@media (max-width: 480px) {
+    .text-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .text-card p {
+        font-size: 0.9rem;
+    }
+}

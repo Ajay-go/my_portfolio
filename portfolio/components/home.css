@@ -1,5 +1,4 @@
-/* home.css */
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +11,8 @@ body {
     color: white;
 }
 
-/* About Section */
+/* Home Section Wrapper */
 #about {
-    margin-left: 250px;
     padding: 40px;
     min-height: 100vh;
     background-color: #181818;
@@ -22,20 +20,20 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    transition: all 0.3s ease;
 }
 
 /* Profile Image */
 #image img {
-    margin-top: 30%;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #247291;
-    box-shadow: 0 0 15px #247291;
+    border: 3px solid #f5e1da;
+    box-shadow: 0 0 15px #f5e1da;
 }
 
-/* Main Text Content */
+/* Main Text */
 #content {
     font-size: 22px;
     text-align: center;
@@ -45,15 +43,14 @@ body {
 
 #content p {
     color: #8f8787;
-    margin-top: 2%;
+    margin-top: 10px;
 }
 
-/* Social Links */
+/* Social Media Links */
 #links {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
     flex-wrap: wrap;
 }
 
@@ -68,14 +65,15 @@ body {
     filter: brightness(1.2) drop-shadow(0 0 5px #3a4750);
 }
 
-/* Contact Section */
+/* Contact Info */
 #connect {
     padding: 20px;
     display: flex;
-    gap: 40px;
-    background-color: #181818;
-    color: white;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    background-color: #181818;
 }
 
 .contact {
@@ -87,7 +85,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 255, 231, 0.15);
     transition: transform 0.2s ease;
-    max-width: 400px;
 }
 
 .contact:hover {
@@ -108,42 +105,44 @@ body {
     white-space: nowrap;
 }
 
-/* Responsive Fix — Keep layout intact, remove margin-left on mobile */
+@media (min-width: 769px) {
+    #about {
+        margin-left: 250px;
+        /* only apply margin if sidebar is visible */
+    }
+}
+
+/* Tablet & Mobile */
 @media (max-width: 768px) {
     #about {
         margin-left: 0;
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
 
     #image img {
-        margin-top: 10%;
         width: 160px;
         height: 160px;
     }
 
     #content {
         font-size: 20px;
-        text-align: center;
     }
 
     #connect {
         flex-direction: column;
-        align-items: center;
         gap: 20px;
     }
 
     .contact {
-        max-width: 90%;
+        width: 90%;
     }
 }
 
+/* Extra Small Devices */
 @media (max-width: 480px) {
     #image img {
         width: 130px;
         height: 130px;
-    }
-    #homes{
-        padding-top: 10%;
     }
 
     #content {
